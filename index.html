@@ -93,7 +93,7 @@
                         <div class="col-md-5">
                             <div class="form">
                                 <h3>Get A Quote</h3>
-                                <form>
+                                <form onsubmit="sendEmail()"; reset(); return false;">
                                     <input class="form-control" type="text" placeholder="Your Name">
                                     <input class="form-control" type="text" placeholder="Mobile Number">
                                     <div class="control-group">
@@ -108,6 +108,22 @@
                                     <button class="btn btn-block">Get A Quote</button>
                                 </form>
                             </div>
+                            <script src="https://smtpjs.com/v3/smtp.js"></script>
+                            <script>
+                                function sendEmail() {
+                                    Email.send({
+                                        Host : "smtp.mailendo.com",
+                                        Username : "username",
+                                        Password : "password",
+                                        To : 'them@website.com',
+                                        From : "you@isp.com",
+                                        Subject : "This is the subject",
+                                        Body : "And this is the body"
+                                    }).then(
+                                    message => alert(message)
+                                    );
+                                }
+                            </script>
                         </div>
                     </div>
                 </div>
