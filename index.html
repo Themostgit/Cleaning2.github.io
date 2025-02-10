@@ -95,8 +95,8 @@
                                 <h3>Get A Quote</h3>
                                 <form action="https://api.web3forms.com/submit" method="POST">
                                     <input type="hidden" name="access_key" value="292a06ec-8179-4f59-aabb-0db1e6005d57">
-                                    <input class="form-control" input name='first_name' type="text" placeholder="Your Name">
-                                    <input class="form-control" input name='mobile number'type="text" placeholder="Mobile Number">
+                                    <input class="form-control" input name='first_name' type="text" placeholder="Your Name" required>
+                                    <input class="form-control" input name='mobile number'type="text" placeholder="Mobile Number" required>
                                     <div class="control-group">
                                         <select class="custom-select">
                                             <option selected>Choose a service</option>
@@ -105,7 +105,7 @@
                                             <option value="3">Office Cleaning</option>
                                         </select>
                                     </div>
-                                    <textarea class="form-control" input name='comment' placeholder="Comment"></textarea>
+                                    <textarea class="form-control" input name='comment' placeholder="Comment"></textarea> required>
                                     <button class="btn btn-block">Get A Quote</button>
                                 </form>
                             </div>
